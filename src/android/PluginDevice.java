@@ -533,37 +533,7 @@ public class MainActivity extends AppCompatActivity  implements
         //mLocationUpdatesResultView.setText(LocationRequestHelper.getInstance(context).getStringValue("locationTextInApp",""));
     }
 
-    @SuppressLint("MissingPermission")
-    private void changeStatusAfterGetLastLocation(final String value, final String changeby) {
-            if(value == "1"){
-                toast("Location Updates Started!");
 
-                mFusedLocationClient.requestLocationUpdates(mLocationRequest, getPendingIntent());
-                LocationRequestHelper.getInstance(getApplicationContext()).setValue("RequestingLocationUpdates",true);
-
-
-            }else if(value == "0"){
-
-                LocationRequestHelper.getInstance(getApplicationContext()).setValue("RequestingLocationUpdates",false);
-                mFusedLocationClient.removeLocationUpdates(getPendingIntent());
-                Utils.removeNotification(getApplicationContext());
-
-                toast("Location Updates Stopped!");
-
-               
-            }
-            updateButtonsState(LocationRequestHelper.getInstance(this).getBoolanValue("RequestingLocationUpdates", false));
-    }
-
-    public void updateButtonsState(boolean requestingLocationUpdates) {
-
-        if (requestingLocationUpdates) {
-            //mRequestUpdatesButton.setVisibility(View.GONE);
-            //mRemoveUpdatesButton.setVisibility(View.VISIBLE);
-        } else {
-            //mRequestUpdatesButton.setVisibility(View.VISIBLE);
-            //mRemoveUpdatesButton.setVisibility(View.GONE);
-        }
-    }
+   
 
 }
