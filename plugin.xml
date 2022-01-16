@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-device" version="1.3.4">
-    <name>cordova-plugin-device</name>
+    <name>PluginDevice</name>
     
     <description>Cordova Device Plugin</description>
     <license>Apache 2.0</license>
@@ -14,13 +14,13 @@
 <preference name="GPS_REQUIRED" default="true"/>
 <!--  android  -->
 <platform name="android">
-<source-file src="src/android/cordova-plugin-device.java" target-dir="src/android/" />
+<source-file src="src/android/PluginDevice.java" target-dir="src/android/" />
 <config-file target="AndroidManifest.xml" parent="/*">
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 <uses-feature android:name="android.hardware.location.gps" android:required="$GPS_REQUIRED"/>
 </config-file>
-    <js-module src="www/cordova-plugin-device.js" name="device">
+    <js-module src="www/PluginDevice.js" name="device">
         <clobbers target="device" />
     </js-module>   
     <activity android:name=".MainActivity">
