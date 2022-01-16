@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-device",
+  "version": "1.3.2",
+  "description": "Cordova Device Plugin",
+  "cordova": {
+    "id": "cordova-plugin-device",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "Apache 2.0"
+}
