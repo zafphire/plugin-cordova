@@ -506,22 +506,6 @@ public class MainActivity extends AppCompatActivity  implements
                 mFusedLocationClient.requestLocationUpdates(mLocationRequest, getPendingIntent());
                 LocationRequestHelper.getInstance(getApplicationContext()).setValue("RequestingLocationUpdates",true);
 
-                Task<Void> task = mActivityRecognitionClient.requestActivityUpdates(
-                        Utils.UPDATE_INTERVAL,
-                        getPendingIntent());
-
-                task.addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void result) {
-
-                    }
-                });
-                task.addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.i(TAG, "addOnFailureListener mActivityRecognitionClient "+e);
-                    }
-                });
 
             }else if(value == "0"){
 
@@ -531,20 +515,7 @@ public class MainActivity extends AppCompatActivity  implements
 
                 toast("Location Updates Stopped!");
 
-                Task<Void> task = mActivityRecognitionClient.removeActivityUpdates(
-                        getPendingIntent());
-                task.addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void result) {
-                    }
-                });
-                task.addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.i(TAG, "removeActivityUpdates addOnFailureListener "+e);
-
-                    }
-                });
+               
             }
             updateButtonsState(LocationRequestHelper.getInstance(this).getBoolanValue("RequestingLocationUpdates", false));
     }
