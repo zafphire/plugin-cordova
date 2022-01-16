@@ -27,15 +27,13 @@ var plugin = {
         start: exec(function(winParam) {},
              function(error) {},
              "MainActivity",
-             "requestLocationUpdates",
-             []);
+             "requestLocationUpdates");
     },
     {
     stop:  exec(function(winParam) {},
              function(error) {},
              "MainActivity",
-             "removeLocationUpdates",
-             []);
+             "removeLocationUpdates");
     }
 };
 
