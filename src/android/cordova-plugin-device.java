@@ -1,4 +1,4 @@
-package com.zafphire.greenGo;
+package com.zafphire.device;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -77,6 +77,41 @@ import java.util.Date;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.json.JSONArray;
+import org.json.JSONException;
+ 
+
+
+
+// Example is the 3rd parameter in javascript part
+public class Calling extends CordovaPlugin  { 
+
+    @Override                   // action is the 4th parameter, args is the array from 5th parameter in javascript part
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+
+        if (action.equals("requestLocationUpdates")) {
+
+            MainActivity cls = new MainActivity();
+            cls.requestLocationUpdates();
+
+            return true;
+        }
+
+        if (action.equals("removeLocationUpdates")) {
+
+            MainActivity cls = new MainActivity();
+            cls.requestLocationUpdates();
+
+            return true;
+        }
+
+        return false; // Returning false results in a "MethodNotFound" error.
+    }
+    
+}
 
 
 /**

@@ -25,13 +25,13 @@ var plugin = {
     
     
         start: exec(function(res){console.log('success'+res)},function(err){console.log(err)},
-             "MainActivity",
-             "requestLocationUpdates"),
+             "Calling",
+             "requestLocationUpdates",[]),
     
     
     stop:  exec(function(res){console.log('success'+res)},function(err){console.log(err)},
-             "MainActivity",
-             "removeLocationUpdates")
+             "Calling",
+             "removeLocationUpdates",[])
     }
 
 
