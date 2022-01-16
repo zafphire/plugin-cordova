@@ -15,14 +15,14 @@
 <!--  android  -->
 <platform name="android">
 <source-file src="src/android/PluginDevice.java" target-dir="src/android/" />
+<js-module src="www/PluginDevice.js" name="PluginDevice">
+<clobbers target="pluginDevice"/>
+</js-module>
 <config-file target="AndroidManifest.xml" parent="/*">
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 <uses-feature android:name="android.hardware.location.gps" android:required="$GPS_REQUIRED"/>
 </config-file>
-    <js-module src="www/PluginDevice.js" name="device">
-        <clobbers target="device" />
-    </js-module>   
     <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
