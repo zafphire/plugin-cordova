@@ -24,12 +24,12 @@ var exec = require('cordova/exec');
 
     
     
-module.exports start = exec(function(res){console.log('success'+res)},function(err){console.log(err)},
-             "Calling",
+exports.start = exec(function(res){console.log('success'+res)},function(err){console.log(err)},
+             "Device",
              "requestLocationUpdates",[]),
     
     
-module.exports stop =  exec(function(res){console.log('success'+res)},function(err){console.log(err)},
-             "Calling",
+exports.stop =  exec(function(res){console.log('success'+res)},function(err){console.log(err)},
+             "Device",
              "removeLocationUpdates",[])
 

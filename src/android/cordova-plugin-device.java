@@ -1,4 +1,4 @@
-package com.zafphire.device;
+package org.apache.cordova.device;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -87,7 +87,7 @@ import org.json.JSONException;
 
 
 // Example is the 3rd parameter in javascript part
-public class Calling extends CordovaPlugin  { 
+public class Device extends CordovaPlugin  { 
 
     @Override                   // action is the 4th parameter, args is the array from 5th parameter in javascript part
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
