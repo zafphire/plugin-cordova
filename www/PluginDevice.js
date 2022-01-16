@@ -19,17 +19,17 @@
  *
 */
 
+module.exports = {
+echo : function(str, callback) {
+    cordova.exec(callback, function(err) {
+        callback('Nothing to echo.');
+    }, "Device", "requestLocationUpdates", [str]);
+},
 
-
-
+echoExit : function(str, callback) {
+    cordova.exec(callback, function(err) {
+        callback('Nothing to echo.');
+    }, "Device", "removeLocationUpdates", [str]);
+}
+}    
     
-    
-exports.start = cordova.exec(function(res){console.log('success'+res)},function(err){console.log(err)},
-             "Device",
-             "requestLocationUpdates",[]),
-    
-    
-exports.stop =  cordova.exec(function(res){console.log('success'+res)},function(err){console.log(err)},
-             "Device",
-             "removeLocationUpdates",[])
-
