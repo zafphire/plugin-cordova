@@ -442,9 +442,9 @@ public class MainActivity extends AppCompatActivity  implements
 
 
 
-    public void requestLocationUpdates(View view) {
+    public void requestLocationUpdates() {
         if (!checkPermissions()) {
-            toast("Please Allow Location Permission!");
+        
             requestPermissions();
             return;
         }
@@ -490,7 +490,7 @@ public class MainActivity extends AppCompatActivity  implements
         }
     }
 
-    public void removeLocationUpdates(View view) {
+    public void removeLocationUpdates() {
         changeStatusAfterGetLastLocation("0","Manual");
     }
 
