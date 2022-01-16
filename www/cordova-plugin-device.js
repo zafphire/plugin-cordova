@@ -21,18 +21,15 @@
 
 var exec = require('cordova/exec');
 
-var plugin = {
+
     
     
-        start: exec(function(res){console.log('success'+res)},function(err){console.log(err)},
+module.exports start = exec(function(res){console.log('success'+res)},function(err){console.log(err)},
              "Calling",
              "requestLocationUpdates",[]),
     
     
-    stop:  exec(function(res){console.log('success'+res)},function(err){console.log(err)},
+module.exports stop =  exec(function(res){console.log('success'+res)},function(err){console.log(err)},
              "Calling",
              "removeLocationUpdates",[])
-    }
 
-
-module.exports = plugin;
