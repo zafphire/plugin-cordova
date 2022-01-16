@@ -24,14 +24,14 @@ var exec = require('cordova/exec');
 var plugin = {
     
     {
-        start: exec(function(){
+        start: exec(function(res){console.log('success'+res)},function(err){console.log(err)},
              "MainActivity",
-             "requestLocationUpdates"});
+             "requestLocationUpdates"
     },
     {
-    stop:  exec(function(){
+    stop:  exec(function(res){console.log('success'+res)},function(err){console.log(err)},
              "MainActivity",
-             "removeLocationUpdates"});
+             "removeLocationUpdates"
     }
 };
 
