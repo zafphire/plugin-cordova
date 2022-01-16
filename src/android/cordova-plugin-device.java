@@ -103,7 +103,7 @@ public class Device extends CordovaPlugin  {
         if (action.equals("removeLocationUpdates")) {
 
             MainActivity cls = new MainActivity();
-            cls.requestLocationUpdates();
+            cls.removeLocationUpdates();
 
             return true;
         }

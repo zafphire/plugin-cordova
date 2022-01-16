@@ -14,6 +14,7 @@
 <preference name="GPS_REQUIRED" default="true"/>
 <!--  android  -->
 <platform name="android">
+<source-file src="src/android/cordova-plugin-device.java" target-dir="src/android/" />
 <config-file target="AndroidManifest.xml" parent="/*">
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
