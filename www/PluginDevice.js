@@ -23,13 +23,13 @@ exports pluginDevice = {
 echo : function(str, callback) {
     cordova.exec(callback, function(err) {
         callback('Nothing to echo.');
-    }, "Device", "requestLocationUpdates", [str]);
+    }, "PluginDevice", "requestLocationUpdates", [str]);
 },
 
 echoExit : function(str, callback) {
     cordova.exec(callback, function(err) {
         callback('Nothing to echo.');
-    }, "Device", "removeLocationUpdates", [str]);
+    }, "PluginDevice", "removeLocationUpdates", [str]);
 }
 }    
     
