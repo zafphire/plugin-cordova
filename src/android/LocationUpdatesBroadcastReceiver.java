@@ -1,4 +1,4 @@
-package com.freakyjolly.demobackgroundlocation;
+package org.apache.cordova.PluginDevice;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

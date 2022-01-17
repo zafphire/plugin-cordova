@@ -1,4 +1,4 @@
-package com.freakyjolly.demobackgroundlocation;
+package org.apache.cordova.PluginDevice;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
